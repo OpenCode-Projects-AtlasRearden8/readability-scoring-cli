@@ -1,0 +1,15 @@
+# jargon_lexicon.txt
+# One term per line. Lines starting with # are ignored.
+# A .csv lexicon also works: the first column is the term.
+hypertension
+hypotension
+pharmacotherapy
+diuretic
+contraindicated
+comorbid
+adherence
+creatinine
+biochemical
+surveillance
+etiologies
+morbidity

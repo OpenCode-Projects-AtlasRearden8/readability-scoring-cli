@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "readability-score"
+version = "1.0.0"
+description = "Offline plain-language readability scoring CLI: Flesch-Kincaid-style grades, SMOG-style counts, long-sentence hotspots, custom jargon flags, batch CSV export"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Asdale Dynamics, LLC" }]
+keywords = ["readability", "flesch-kincaid", "smog", "plain-language", "health-literacy", "offline", "cli"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Environment :: Console",
+    "Intended Audience :: Healthcare Industry",
+    "Intended Audience :: Writers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Text Processing :: Linguistic",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+readability-score = "readability_score.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["readability_score*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
